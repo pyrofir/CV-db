@@ -1,5 +1,5 @@
 démarrer le conteneur:
-docker compose up -d
+docker compose up -d 
 stopper le conteneur:
 docker compose down
 conection à la db:
