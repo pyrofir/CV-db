@@ -4,3 +4,6 @@ stopper le conteneur:
 docker compose down
 conection à la db:
 docker exec -it db-cv psql -U samuel -d CvData
+connecte le back:
+docker ps
+network connect cv-reseau (port du back)
