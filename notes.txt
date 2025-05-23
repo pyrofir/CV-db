@@ -15,3 +15,8 @@ docker network inspect cv-reseau
 docker exec -u root -it CV-front apt update
 docker exec -u root -it CV-front apt install -y curl
 docker exec -it CV-front curl http://CV-back:8080/CV/Competence 
+
+
+docker exec -i db-cv psql -U samuel -d CvData < init.sql
+
+Get-Content .\init.sql | docker exec -i db-cv psql -U samuel -d CvData
