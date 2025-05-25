@@ -1,8 +1,114 @@
+\set ON_ERROR_STOP on
+
 INSERT INTO type_experience (type) VALUES
 ('Stage'),
 ('Projet étudiant'),
 ('Expérience professionnelle'),
 ('Projet personnel');
+
+
+INSERT INTO type_de_competences (type) VALUES
+('Langages de programmation'), 
+('Outils'), 
+('Methodes'), 
+('Technologies'), 
+('Base de donnees'), 
+('Soft skill'),
+('Langues');
+
+-- Langages
+INSERT INTO competences (type, note, name) VALUES
+(1, 3, 'JavaScript'),--1
+(1, 4, 'Go'),--2
+(1, 7, 'C'),--3
+(1, 7, 'C++ logiciel'),--4
+(1, 5, 'C#'),--5
+(1, 5, 'Java'),--6
+(1, 2, 'Html Css'),--7
+(1, 4, 'Python'),--8
+(1, 4, 'Archimate'),--9
+(1, 5, 'UML'),--10
+(1, 2, 'Kotlin'),--11
+(1, 4, 'Shell');--12
+
+
+-- Outils
+INSERT INTO competences (type, note, name) VALUES
+(2, 7, 'Git'), --13
+(2, 5, 'Docker'),--14
+(2, 4, 'Jenkins'),--15
+(2, 4, 'Bizzdesign'),--16
+(2, 4, 'Horizzon'),--17
+(2, 5, 'PaaS'),--18
+(2, 4, 'ServiceNow'),--19
+(2, 7, 'Teams'),--20
+(2, 8, 'Powerpoint'),--21
+(2, 3, 'Heroku'),--22
+(2, 2, 'openstack'),--23
+(2, 2, 'aws'),--24
+(2, 2, 'azure'),--25
+(2, 3, 'wordpress'),--26
+(2, 5, 'Unity');--27
+
+-- Methodes
+INSERT INTO competences (type, note, name) VALUES
+(3, 4, 'Cycle en V'),--28
+(3, 5, 'DevOps'),--29
+(3, 3, 'Buisness case'),--30
+(3, 3, 'lucidchart'),--31
+(3, 6, 'Agile - scrum'),--32
+(3, 5,'Controller-Service-Repositor'),--33
+(3, 5,'Theorie du langage');--34
+
+-- Technologies
+INSERT INTO competences (type, note, name) VALUES
+(4, 5, '.NET'),--35
+(4, 4, 'Json'),--36
+(4, 2, 'Vue.js'),--37
+(4, 5, 'REST'),--38
+(4, 6, 'API'),--39
+(4, 4, 'Android'),--40
+(4, 2, 'Spring'),--41
+(4, 2, 'AngularJS'),--42
+(4, 4, 'React'),--43
+(4, 4, 'Blazor'),--44
+(4, 4, 'node.js'),--45
+(4, 3, 'Django'),--46
+(4, 3, 'Boostrap');--47
+
+-- Base de donnees
+INSERT INTO competences (type, note, name) VALUES
+(5, 6, 'SQL Server'),--48
+(5, 6, 'MySQL'),--49
+(5, 3, 'Mongo DB');--50
+
+-- Soft skill
+INSERT INTO competences (type, note, name) VALUES
+(6, 5, 'Analyse fonctionnelle'),--51
+(6, 4, 'Analyse de données'),--52
+(6, 7, 'Apprentissage rapide'),--53
+(6, 5, 'Animation réunion'),--54
+(6, 5, 'Comunication orale et écrite en équipe'),--55
+(6, 5, 'Analyse des besoins'),--56
+(6, 6, 'Synthése'),--57
+(6, 6, 'Passer d''un besoin à une solution'),--58
+(6, 5, 'Organisation d''équipe'),--59
+(6, 6, 'Communication pluridisciplinaire');--60
+
+-- Langues
+INSERT INTO competences (type, note, name) VALUES
+(7, 10, 'Français'),--61
+(7, 8, 'Anglais (Toeic 920 )'),--62
+(7, 2, 'Espagnol');--63
+
+
+-- oublies
+INSERT INTO competences (type, note, name) VALUES
+(2, 5, 'AlanAi'),--64
+(1, 5, 'Assembleur');--65
+
+
+
 
 
 -- Personel - Portfolio 1
@@ -26,6 +132,10 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (1, '');
 
+
+--compétences de projets
+--INSERT INTO competences_de_projet (competence, projet) VALUES
+--(, 1);
 
 
 
@@ -53,7 +163,23 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (2, 'Découpage applicatif de la solution'),
 (2, 'Évaluation de la criticité de l''application');
 
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(16, 2),
+(17, 2),
+(18, 2),
+(19, 2),
+(20, 2),
+(51, 2),
+(52, 2),
+(53, 2),
+(56, 2),
+(57, 2),
+(58, 2),
+(59, 2),
+(60, 2),
+(61, 2),
+(62, 2);
 
 -- SNCF DGEX - Développeur web 3
 INSERT INTO experiences (
@@ -77,7 +203,16 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (3, 'Développement des fonctions'),
 (3, 'Échange avec les responsables de l''API sur la forme des requêtes');
 
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
 
+(1, 3),
+(7, 3),
+(13, 3),
+(32, 3),
+(43, 3),
+(47, 3),
+(55, 3);
 
 -- SIGL - Développeur Applications Web 4
 INSERT INTO experiences (
@@ -101,6 +236,18 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (4, 'Exploration de l''application'),
 (4, 'Décision sur les fonctionnalités à développer'),
 (4, 'Préparation de la passation');
+
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 4),
+(7, 4),
+(13, 4),
+(15, 4),
+(32, 4),
+(43, 4),
+(49, 4),
+(55, 4),
+(59, 4);
 
 
 -- UQAC - Développeur full stack 5
@@ -126,7 +273,18 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (5, 'Développement des fonctionnalités du back'),
 (5, 'Mise en place des docker'),
 (5, 'Mise en place de la database');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 5),
+(5, 5),
+(7, 5),
+(13, 5),
+(32, 5),
+(35, 5),
+(42, 5),
+(49, 5), 
+(55, 5),
+(59, 5);
 
 -- SIGL - Tech lead 6
 INSERT INTO experiences (
@@ -153,7 +311,24 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (6, 'Échange avec les autres équipes sur les API'),
 (6, 'Rédaction et correction de la documentation'),
 (6, 'Consultation de la documentation');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 6),
+(7, 6),
+(13, 6),
+(14, 6),
+(20, 6),
+(21, 6),
+(32, 6),
+(38, 6),
+(39, 6),
+(43, 6),
+(45, 6),
+(49, 6),
+(53, 6),
+(54, 6),
+(55, 6),
+(59, 6);
 
 -- SIGL - Analyste fonctionnel 7
 INSERT INTO experiences (
@@ -177,7 +352,15 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (7, 'Listing des tâches'),
 (7, 'Organisations temporelles'),
 (7, 'Mise en place du business case');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(20, 7),
+(21, 7),
+(28, 7),
+(30, 7),
+(51, 7),
+(52, 7),
+(56, 7);
 
 -- SIGL - Responsable back-end application web 8
 INSERT INTO experiences (
@@ -205,7 +388,30 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (8, 'Opérationnalisation du back-end'),
 (8, 'Opérationnalisation de la base de données'),
 (8, 'Développement');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(2, 8),
+(8, 8),
+(10, 8),
+(13, 8),
+(22, 8),
+(24, 8),
+(29, 8),
+(32, 8),
+(38, 8),
+(39, 8),
+(46, 8),
+(48, 8),
+(50, 8),
+(51, 8),
+(52, 8),
+(53, 8),
+(54, 8),
+(55, 8),
+(56, 8),
+(57, 8),
+(58, 8),
+(59, 8);
 
 -- SIGL - Analyste fonctionnel 9
 INSERT INTO experiences (
@@ -231,7 +437,16 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (9, 'Diagramme de cas d''utilisation'),
 (9, 'Diagramme d''état'),
 (9, 'Diagramme de communication');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(10, 9),
+(21, 9),
+(31, 9),
+(55, 9),
+(56, 9),
+(57, 9),
+(58, 9),
+(59, 9);
 
 
 -- SIGL - IOT 10
@@ -260,7 +475,27 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (10, 'Planning'),
 (10, 'Réalisation d''un Poc'),
 (10, 'Présentations de l''objet');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(65, 10),
+(1, 10),
+(11, 10),
+(64, 10),
+(20, 10),
+(21, 10),
+(30, 10),
+(38, 10),
+(39, 10),
+(43, 10),
+(51, 10),
+(52, 10),
+(53, 10),
+(54, 10),
+(55, 10),
+(56, 10),
+(57, 10),
+(58, 10),
+(59, 10);
 -- UQAC - Développeur - applications android 11
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -283,7 +518,19 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (11, 'choix de l''application'),
 (11, 'développement'),
 (11, 'mise en place de la base de données');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(11, 11),
+(13, 11),
+(21, 11),
+(32, 11),
+(40, 11),
+(50, 11),
+(53, 11),
+(54, 11),
+(55, 11),
+(57, 11),
+(59, 11);
 -- SIGL - DevOps 12
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -306,7 +553,19 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (12, 'Construction du cloud privé sur un cloud AWS à l''aide d''OpenStack'),
 (12, 'Déploiement d''un cloud public et mise en relation avec le cloud sous OpenStack'),
 (12, 'Déploiement de WordPress sur le cloud hybride');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(18, 12),
+(23, 12),
+(24, 12),
+(25, 12),
+(26, 12),
+(29, 12),
+(32, 12),
+(51, 12),
+(55, 12),
+(56, 12),
+(59, 12);
 -- SIGL -  Développeur Unity 13
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -327,7 +586,14 @@ INSERT INTO experiences (
 -- Tâches
 INSERT INTO taches_experiences (experience, tache) VALUES
 (13, 'développement du jeu');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 13),
+(5, 13),
+(27, 13),
+(53, 13),
+(59, 13),
+(63, 13);
 -- SIGL - algorithm developer 14
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -350,7 +616,16 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (14, 'Recherche d''algorithmes'),
 (14, 'Décision des différents algorithmes à utiliser'),
 (14, 'Programmation');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(8, 14),
+(52, 14),
+(54, 14),
+(55, 14),
+(56, 14),
+(57, 14),
+(58, 14),
+(59, 14);
 -- SIGL - Développeur 15
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -372,7 +647,11 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (15, 'Compréhension des différentes méthodes et choix'),
 (15, 'Développement des fonctions');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(3, 15),
+(13, 15),
+(53, 15);
 -- SIGL - Controller-Service-Repository 16
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -394,7 +673,13 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (16, 'Compréhension du modèle'),
 (16, 'développement');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(6, 16),
+(13, 16),
+(33, 16),
+(39, 16),
+(55, 16);
 -- SIGL - développeur serveur web 17
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -416,7 +701,13 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (17, 'Apprentissage des protocoles'),
 (17, 'développement du serveur');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(4, 17),
+(13, 17),
+(53, 17),
+(55, 17),
+(59, 17);
 -- SIGL -  développement, optimisation C++ 18
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -442,7 +733,17 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (18, 'Création de l''évaluation de la table de jeu'),
 (18, 'Construction du bot'),
 (18, 'Mise en place de l''affichage des mouvements');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(4, 18),
+(13, 18),
+(32, 18),
+(53, 18),
+(54, 18),
+(55, 18),
+(56, 18),
+(57, 18),
+(59, 18);
 -- SIGL -  Développeur réseaux de neurones 19
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -466,7 +767,20 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (19, 'réalisation du réseau de neurones'),
 (19, 'réalisation de la transformation d''image pour la passer au réseau de neurones');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(3, 19),
+(13, 19),
+(32, 19),
+(51, 19),
+(53, 19),
+(54, 19),
+(55, 19),
+(56, 19),
+(57, 19),
+(58, 19),
+(59, 19),
+(62, 19);
 -- SIGL - piscine SQL 20
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -487,7 +801,10 @@ INSERT INTO experiences (
 -- Tâches
 INSERT INTO taches_experiences (experience, tache) VALUES
 (20, 'exercices');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(49, 20),
+(53, 20);
 -- SIGL - shell 21
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -511,7 +828,14 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (21, 'création du lexer et du parser'),
 (21, 'Exécution de l''arbre de décision'),
 (21, ' mise en place d''une testsuit');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(3, 21),
+(12, 21),
+(13, 21),
+(53, 21),
+(55, 21),
+(59, 21);
 -- SIGL -  Piscine C++ 22
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -533,7 +857,10 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (22, 'Suivre les cours de C++'),
 (22, ' réaliser les exercices');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(4, 22),
+(53, 22);
 -- SIGL - Développeur C++ 23
 
 INSERT INTO experiences (
@@ -556,7 +883,12 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (23, 'Implémentation du stockage du nombre'),
 (23, 'Opérations de calcul');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(4, 23),
+(13, 23),
+(53, 23),
+(56, 23);
 -- SIGL - piscine C 24
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -578,7 +910,10 @@ INSERT INTO experiences (
 INSERT INTO taches_experiences (experience, tache) VALUES
 (24, 'Suivre les cours de C'),
 (24, 'réaliser les exercices');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(3, 24),
+(53, 24);
 -- SIGL - développeur C 25
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -599,7 +934,11 @@ INSERT INTO experiences (
 -- Tâches
 INSERT INTO taches_experiences (experience, tache) VALUES
 (25, 'développement');
-
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(3, 25),
+(13, 25),
+(53, 25);
 -- SIGL - unity 26
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
@@ -624,110 +963,19 @@ INSERT INTO taches_experiences (experience, tache) VALUES
 (26, 'développement des fonctionnalités du jeu'),
 (26, 'créations des IA'),
 (26, 'Préparation de la présentation du jeu');
+--compétences de projets
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 26),
+(5, 26),
+(27, 26),
+(53, 26),
+(55, 26),
+(59, 26);
 
 
 
 
-INSERT INTO formation (dates, ecole, specialisation, description) VALUES
-('Février 2021 à Janvier 2022', 'EPITA SIGL', 'Système d''information & génie logiciel',
- 'Collaboration en équipe sur projets simultanés, approche métier, autonomie'),
-('Septembre 2017 à Septembre 2023', 'EPITA', 'Diplôme d''ingénieur, Informatique', NULL),
-('Janvier 2022 à 2023', 'Université du Québec à Chicoutimi', 'Maîtrise, Informatique', NULL);
 
-
-INSERT INTO type_de_competences (type) VALUES
-('Langages de programmation'), --1
-('Outils'), --2
-('Methodes'), --3
-('Technologies'), --4
-('Base de donnees'), --5
-('Soft skill'),--6
-('Langues');--7
-
--- Langages
-INSERT INTO competences (type, note, name) VALUES
-(1, 3, 'JavaScript'),--8
-(1, 4, 'Go'),--9
-(1, 7, 'C'),--10
-(1, 7, 'C++ logiciel'),--11
-(1, 5, 'C#'),--12
-(1, 5, 'Java'),--13
-(1, 2, 'Html Css'),--14
-(1, 4, 'Python'),--15
-(1, 4, 'Archimate')--16
-(1, 5, 'UML'),--17
-(1, 2, 'Kotlin'),--18
-(1, 4, 'Shell');--19
-
-
--- Outils
-INSERT INTO competences (type, note, name) VALUES
-(2, 7, 'Git'), --20
-(2, 5, 'Docker'),--21
-(2, 4, 'Jenkins'),--22
-(2, 4, 'Bizzdesign'),--23
-(2, 4, 'Horizzon'),--24
-(2, 5, 'PaaS'),--25
-(2, 4, 'ServiceNow'),--26
-(2, 7, 'Teams'),--27
-(2, 8, 'Powerpoint'),--28
-(2, 3, 'Heroku')--29
-(2, 2, 'openstack'),--30
-(2, 2, 'aws'),--31
-(2, 2, 'azure'),--32
-(2, 3, 'wordpress'),--33
-(2, 5, 'Unity');--34
-
--- Methodes
-INSERT INTO competences (type, note, name) VALUES
-(3, 4, 'Cycle en V'),--35
-(3, 5, 'DevOps'),--36
-(3, 3, 'Buisness case'),--37
-(3, 3, ' lucidchart'),--38
-(3, 6, 'Agile - scrum'),--39
-(3, 5,'Controller-Service-Repositor'),--40
-(3, 5,'Theorie du langage');--41
-
--- Technologies
-INSERT INTO competences (type, note, name) VALUES
-(4, 5, '.NET'),--42
-(4, 4, 'Json'),--43
-(4, 2, 'Vue.js'),--44
-(4, 5, 'REST'),--45
-(4, 6, 'API'),--46
-(4, 4, 'Android'),--47
-(4, 2, 'Spring'),--48
-(4, 2, 'AngularJS'),--49
-(4, 4, 'React'),--50
-(4, 4, 'Blazor'),--51
-(4, 4, 'node.js'),--52
-(4, 3, 'Django'),--53
-(4, 3, 'Boostrap');--54
-
--- Base de donnees
-INSERT INTO competences (type, note, name) VALUES
-(5, 6, 'SQL Server'),--55
-(5, 6, 'MySQL'),--56
-(5, 3, 'Mongo DB');--57
-
--- Soft skill
-INSERT INTO competences (type, note, name) VALUES
-(6, 5, 'Analyse fonctionnelle'),--58
-(6, 4, 'Analyse de données'),--59
-(6, 7, 'Apprentissage rapide'),--60
-(6, 5, 'Animation réunion'),--61
-(6, 5, 'Comunication orale et écrite en équipe'),--62
-(6, 5, 'Analyse des besoins'),--63
-(6, 6, 'Synthése'),--64
-(6, 6, 'Passer d''un besoin à une solution'),--65
-(6, 5, 'Organisation d''équipe'),--66
-(6, 6, 'Communication pluridisciplinaire');--67
-
--- Langues
-INSERT INTO competences (type, note, name) VALUES
-(7, 10, 'Français'),--68
-(7, 8, 'Anglais (Toeic 920 )'),--69
-(7, 2, 'Espagnol');--70
 
 --add le reste quand ça manque
 --les compétences de proejet
