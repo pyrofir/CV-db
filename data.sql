@@ -1,3 +1,4 @@
+DROP SCHEMA public CASCADE; CREATE SCHEMA public;
 -- Table type_experience
 CREATE TABLE type_experience (
     ID SERIAL PRIMARY KEY,
