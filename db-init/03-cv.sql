@@ -105,38 +105,64 @@ INSERT INTO competences (type, note, name) VALUES
 -- oublies
 INSERT INTO competences (type, note, name) VALUES
 (2, 5, 'AlanAi'),--64
-(1, 5, 'Assembleur');--65
+(1, 5, 'Assembleur'),--65
+(5, 5, 'PostgreSQL');--66
 
 
 
 
 
--- Personel - Portfolio 1
+-- Personnel - Portfolio 1
 INSERT INTO experiences (
     poste, societe, date, duree, type, context, objectif, resultat, site_web, type_de_societe
 ) VALUES (
-    'Portfolio',
-    '',
-    '',
-    '',
-    3, -- Projet personel
-    '',
-    '',
-    '',
+    'Développeur fullstack C#.NET',
+    'madebysamuel',
+    'mai 2025 à aujourd''hui',
+    '2 semaines',
+    3, -- Projet personnel
+    'Projet personnel de portfolio mais aussi de démonstration technique. L’objectif est d’apprendre de nouvelles technologies et de tester différents éléments du projet en les remplaçant.',
+    'Avoir un portfolio fonctionnel, apprendre de nouvelles technologies, m’amuser',
+    'Ce site web',
     NULL,
-    ''
+    'personnel'
 );
 
 
 -- Tâches
 INSERT INTO taches_experiences (experience, tache) VALUES
-(1, '');
+(1, 'Choix des technologies'),
+(1, 'Mise en place de la structure de la base de données'),
+(1, 'Mise en place de la structure du front'),
+(1, 'Mise en place de la structure du back'),
+(1, 'Mise en place des Docker pour le front, le back et la base de données'),
+(1, 'Connexion entre les services du front, du back et de la base de données'),
+(1, 'Mise en place de données de test'),
+(1, 'Développement des différentes fonctionnalités : pages - API'),
+(1, 'Mise en place d’un template pour le front'),
+(1, 'Construction des éléments statiques du front'),
+(1, 'Mise en place du serveur web et du DNS'),
+(1, 'Upload du site, du back et de la base de données sur le serveur web'),
+(1, 'Nettoyage du code source'),
+(1, 'Création des fichiers README');
 
 
---compétences de projets
---INSERT INTO competences_de_projet (competence, projet) VALUES
---(, 1);
-
+-- Compétences de projet
+INSERT INTO competences_de_projet (competence, projet) VALUES
+(1, 1),
+(5, 1),
+(7, 1),
+(12, 1),
+(13, 1),
+(14, 1),
+(18, 1),
+(29, 1),
+(33, 1),
+(25, 1),
+(44, 1),
+(66, 1),
+(51, 1),
+(53, 1);
 
 
 -- Desjardins - Architecte de solution 2
@@ -148,7 +174,7 @@ INSERT INTO experiences (
     'janvier 2023 à juin 2023',
     'Pendant 6 mois',
     1, -- Stage
-    'Stage de fin ''études Environnement bancaire\nSupport au RH\nContraintes de sécurité\n Analyse d''architecture et déploiement d''une nouvelle application de ressources humaines',
+    'Stage de fin ''études Environnement bancaire, support au RH, contraintes de sécurité analyse d''architecture et déploiement d''une nouvelle application de ressources humaines',
     'Comprendre les enjeux de la fonction d''architecte de solutions et être capable de remplir ce rôle',
     'Travaux achevés à la satisfaction de l''équipe',
     'https://www.desjardins.com/',
@@ -190,7 +216,7 @@ INSERT INTO experiences (
     'novembre 2020 à janvier 2021',
     'Pendant 3 mois',
     1, -- Stage
-    'Stage de fin de tronc commun\n1ère expérience en environnement pro, agile, React, dev web front-end',
+    'Stage de fin de tronc commun, 1ère expérience en environnement pro, agile, React, dev web front-end',
     'Saisir les principes du front-end, cerner le monde de l''entreprise, réaliser une appli web fonctionnelle',
     'Application fonctionnelle, maîtrise de React et agilité',
     NULL,
@@ -295,7 +321,7 @@ INSERT INTO experiences (
     'février 2021 à janvier 2022',
     'Pendant 1 an',
     2, -- Projet étudiant
-    ' Réalisation d’un système d’information complet pour une entité comme la Fnac avec une équipe de 60 personnes sous méthodologie agile\nRôle de tech lead dans l''équipe de gestion des stocks',
+    ' Réalisation d’un système d’information complet pour une entité comme la Fnac avec une équipe de 60 personnes sous méthodologie agile, Rôle de tech lead dans l''équipe de gestion des stocks',
     ' comprendre les enjeux d''un projet avec une grande équipe et la réalité du monde de l''entreprise',
     ' système d''information fonctionnel',
     NULL,
@@ -371,8 +397,8 @@ INSERT INTO experiences (
     'septembre 2021 à octobre 2021',
     'Pendant 2 mois',
     2, -- Projet étudiant
-    ' Projet de dev en équipe\nPool de data à exploiter\nNécessiter de faire 2 fois l''application avec une stack Technique maîtrisée et l''autre non\nResponsable back-end',
-    'Réaliser deux applications fonctionnelles propres et avoir un flux de travail efficace avec TestSuite, et opérationnalisation automatique avec un environnement de prod\nApprendre de nouvelles technologies\nPrendre les casquettes fonctionnelles et d''opérationnalisation',
+    ' Projet de dev en équipe, Pool de data à exploiter, Nécessiter de faire 2 fois l''application avec une stack Technique maîtrisée et l''autre non, Responsable back-end',
+    'Réaliser deux applications fonctionnelles propres et avoir un flux de travail efficace avec TestSuite, et opérationnalisation automatique avec un environnement de prod, Apprendre de nouvelles technologies, Prendre les casquettes fonctionnelles et d''opérationnalisation',
     '2 applications fonctionnelles avec des technologies différentes',
     NULL,
     'Pédagogique - environement professionel'
@@ -757,7 +783,7 @@ INSERT INTO experiences (
     'comprendre le principe des réseaux de neurones',
     '+
  +
- 2 membres sur 4 ont travaillé sur le projet\nLes fonctions de l''OCR étaient opérationnelles mais elles n''étaient pas raccordées',
+ 2 membres sur 4 ont travaillé sur le projet, Les fonctions de l''OCR étaient opérationnelles mais elles n''étaient pas raccordées',
     NULL,
     'Pédagogique'
 );
@@ -982,6 +1008,6 @@ INSERT INTO competences_de_projet (competence, projet) VALUES
 
 -- Formations
 INSERT INTO formation (ID, dates, ecole, specialisation, description) VALUES
-(1, 'De Février 2021 à janvier 2022', ' EPITA SIGL', ' système d''information & génie logiciel', '-Collaboration en équipe imposé et constante sur plusieurs projets simultanés\n-Approche orientée métier : réponse à des besoins exprimés par les parties prenantes\n-Cours le soir avec journée libre à des ns d''autonomie et d''organisation'),
+(1, 'De Février 2021 à janvier 2022', ' EPITA SIGL', ' système d''information & génie logiciel', '-Collaboration en équipe imposé et constante sur plusieurs projets simultanés, -Approche orientée métier : réponse à des besoins exprimés par les parties prenantes, -Cours le soir avec journée libre à des ns d''autonomie et d''organisation'),
 (2, 'De Septembre 2017 à septembre 2023', ' EPITA: ECOLE D''INGÉNIEUR EN INFORMATIQUE', ' Diplôme d''ingénieur, Informatique', NULL),
 (3, 'De Janvier 2022 à 2023', ' UNIVERSITÉ DU QUÉBEC - CHICOUTIMI', ' Maîtrise, Informatique', NULL);
