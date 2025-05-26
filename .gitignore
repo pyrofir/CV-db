@@ -1,0 +1,8 @@
+# Ignore notes.txt
+notes.txt
+
+# Ignore data directory
+data/
+
+# Ignore test file
+teste.sql
