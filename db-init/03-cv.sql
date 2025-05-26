@@ -120,7 +120,7 @@ INSERT INTO experiences (
     'madebysamuel',
     'mai 2025 à aujourd''hui',
     '2 semaines',
-    3, -- Projet personnel
+    4, -- Projet personnel
     'Projet personnel de portfolio mais aussi de démonstration technique. L’objectif est d’apprendre de nouvelles technologies et de tester différents éléments du projet en les remplaçant.',
     'Avoir un portfolio fonctionnel, apprendre de nouvelles technologies, m’amuser',
     'Ce site web',
