@@ -55,6 +55,4 @@ CREATE TABLE competences_de_projet (
     ID SERIAL PRIMARY KEY,
     competence INT REFERENCES competences(ID),
     projet INT
-    -- Attention : la table "projet" n'existe pas dans ton schéma
-    -- On laisse projet INT pour l’instant
 );
